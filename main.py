@@ -4,8 +4,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 date = input('Which year do you want to travel to? Type a year in this format YYYY-MM-DD: ')
-spotify_client_id = "da3a8bfc1f3e4917aa7af09212e02fcd"
-spotify_token = "54dc0b87ee8541a4ac0e6bed7c9a9cee"
+spotify_client_id = "CLIENT_ID"
+spotify_token = "TOKEN"
 spotify_redirect_uri = "http://example.com"
 spotify_scope = "playlist-modify-private"
 
@@ -20,8 +20,8 @@ for article in articles:
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope="playlist-modify-private",
                                                redirect_uri="http://example.com",
-                                               client_id="da3a8bfc1f3e4917aa7af09212e02fcd",
-                                               client_secret="54dc0b87ee8541a4ac0e6bed7c9a9cee",
+                                               client_id=spotify_client_id,
+                                               client_secret=spotify_token,
                                                show_dialog=True,
                                                cache_path="token.txt"))
 user_id = sp.current_user()["id"]
